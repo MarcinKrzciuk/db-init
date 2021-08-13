@@ -21,16 +21,27 @@ public class DbInitApplication {
 				SpringApplication.run(DbInitApplication.class, args);
 
 
-		AddressRepository addressRepository =configurableApplicationContext.getBean(AddressRepository.class);
-		Address address = new Address("Rolnicza", 7, 98765);
-		addressRepository.save(address);
-
-		PersonRepository personRepository = configurableApplicationContext.getBean(PersonRepository.class);
-		Person person = new Person("Jan", "Kowalski", 55, 1L);
-		personRepository.save(person);
+//		AddressRepository addressRepository =configurableApplicationContext.getBean(AddressRepository.class);
+//		Address address = new Address("Rolnicza", 7, 98765);
+//		addressRepository.save(address);
+//
+//		PersonRepository personRepository = configurableApplicationContext.getBean(PersonRepository.class);
+//		Person person = new Person("Jan", "Kowalski", 55, 1L);
+//		personRepository.save(person);
 
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("test");
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+		Person person1 = new Person("Marcin", "Krzciuk", 45, 1L);
+
+		entityManager.getTransaction().begin();
+		entityManager.persist(person1);
+		entityManager.getTransaction().commit();
+
+		Address address1 = new Address("Wodna", 13, 9999);
+		entityManager.getTransaction().begin();
+		entityManager.persist(address1);
+		entityManager.getTransaction().commit();
 
 	}
 }
