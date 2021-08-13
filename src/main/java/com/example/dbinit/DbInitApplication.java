@@ -4,12 +4,10 @@ import com.example.dbinit.entity.Address;
 import com.example.dbinit.entity.Person;
 import com.example.dbinit.repository.AddressRepository;
 import com.example.dbinit.repository.PersonRepository;
+import lombok.var;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 @SpringBootApplication
@@ -29,8 +27,8 @@ public class DbInitApplication {
 //		Person person = new Person("Jan", "Kowalski", 55, 1L);
 //		personRepository.save(person);
 
-		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("test");
-		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		var entityManagerFactory = Persistence.createEntityManagerFactory("test");
+		var entityManager = entityManagerFactory.createEntityManager();
 
 		Person person1 = new Person("Marcin", "Krzciuk", 45, 1L);
 
@@ -42,6 +40,7 @@ public class DbInitApplication {
 		entityManager.getTransaction().begin();
 		entityManager.persist(address1);
 		entityManager.getTransaction().commit();
+		entityManager.close();
 
 	}
 }
