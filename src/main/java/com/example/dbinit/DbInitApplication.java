@@ -17,13 +17,13 @@ public class DbInitApplication {
 				SpringApplication.run(DbInitApplication.class, args);
 
 
-		PersonRepository personRepository = configurableApplicationContext.getBean(PersonRepository.class);
-		Person person = new Person("Jan", "Kowalski", 55);
-		personRepository.save(person);
-
-		AddressRepository addressRepository =configurableApplicationContext.getBean(AddressRepository.class);
-		Address address = new Address("Rolnicza", 7, 98765);
-		addressRepository.save(address);
+//		PersonRepository personRepository = configurableApplicationContext.getBean(PersonRepository.class);
+//		Person person = new Person("Jan", "Kowalski", 55);
+//		personRepository.save(person);
+//
+//		AddressRepository addressRepository =configurableApplicationContext.getBean(AddressRepository.class);
+//		Address address = new Address("Rolnicza", 7, 98765);
+//		addressRepository.save(address);
 
 	}
 }
