@@ -4,6 +4,7 @@ CREATE TABLE Person(
   last_name VARCHAR(255) NOT NULL,
   age INTEGER NOT NULL,
   id_address INTEGER,
+  gender VARCHAR(15),
   PRIMARY KEY (id_person)
 );
 
