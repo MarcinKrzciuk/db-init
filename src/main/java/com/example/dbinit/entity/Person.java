@@ -22,11 +22,14 @@ public class Person {
     private Integer age;
     @Column(name = "id_address")
     private Long idAddress;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
 
-    public Person(String firstName, String lastName, Integer age, Long idAddress) {
+    public Person(String firstName, String lastName, Integer age, Long idAddress, Gender gender) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.idAddress = idAddress;
+        this.gender = gender;
     }
 }
