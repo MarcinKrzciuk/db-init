@@ -37,3 +37,23 @@ CREATE TABLE Department(
     name VARCHAR(100),
     PRIMARY KEY (code, number)
 );
+
+CREATE TABLE Firm(
+    id_firm BIGINT NOT NULL AUTO_INCREMENT,
+    firm_name VARCHAR(100),
+    PRIMARY KEY (id_firm)
+);
+
+CREATE TABLE Faddress(
+    id_faddress BIGINT NOT NULL AUTO_INCREMENT,
+    street VARCHAR(100),
+    number VARCHAR(20),
+    id_firm BIGINT NOT NULL,
+    PRIMARY KEY (id_faddress)
+);
+
+CREATE TABLE Info(
+    id_info BIGINT NOT NULL AUTO_INCREMENT,
+    details VARCHAR(100),
+    id_firm BIGINT
+);
