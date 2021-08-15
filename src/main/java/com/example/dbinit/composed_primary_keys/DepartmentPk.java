@@ -1,4 +1,4 @@
-package com.example.dbinit.composedprimary.pk;
+package com.example.dbinit.composed_primary_keys;
 
 
 import lombok.Getter;

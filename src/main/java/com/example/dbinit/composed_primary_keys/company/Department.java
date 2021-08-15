@@ -1,6 +1,6 @@
-package com.example.dbinit.composedprimary.pk.company;
+package com.example.dbinit.composed_primary_keys.company;
 
-import com.example.dbinit.composedprimary.pk.DepartmentPk;
+import com.example.dbinit.composed_primary_keys.DepartmentPk;
 import lombok.Getter;
 import lombok.Setter;
 
