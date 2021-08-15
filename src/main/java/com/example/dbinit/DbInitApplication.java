@@ -1,6 +1,6 @@
 package com.example.dbinit;
 
-import com.example.dbinit.composedprimary.pk.company.Department;
+import com.example.dbinit.one_to_one_sec_table.Firm;
 import lombok.var;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -36,16 +36,31 @@ public class DbInitApplication {
 //		entityManager.persist(address1);
 //		entityManager.getTransaction().commit();
 //		entityManager.close();
-
+//
+//		entityManager.getTransaction().begin();
+//		Department department = new Department();
+//		department.setName("IT");
+//		department.setCode("ABC");
+//		department.setNumber(123L);
+//		entityManager.persist(department);
+//		entityManager.getTransaction().commit();
 
 
 		entityManager.getTransaction().begin();
-		Department department = new Department();
-		department.setName("IT");
-		department.setCode("ABC");
-		department.setNumber(123L);
-		entityManager.persist(department);
-		entityManager.getTransaction().commit();
+		Firm firm1 = new Firm();
+		firm1.setFirmName("MK");
+		firm1.setStreet("Stein");
+		firm1.setNumber("20");
+		firm1.setDetails("test");
 
+		Firm firm2 = new Firm();
+		firm2.setFirmName("DELL");
+		firm2.setStreet("Wodna");
+		firm2.setNumber("100");
+		firm2.setDetails("no comment");
+
+		entityManager.persist(firm1);
+		entityManager.persist(firm2);
+		entityManager.getTransaction().commit();
 	}
 }
