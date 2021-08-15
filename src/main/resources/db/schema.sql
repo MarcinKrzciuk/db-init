@@ -15,3 +15,25 @@ CREATE TABLE Address(
     zip_code INTEGER NOT NULL,
     PRIMARY KEY (id_address)
 );
+
+CREATE TABLE Product(
+    id_product BIGINT NOT NULL AUTO_INCREMENT,
+    expiration_date DATE,
+    PRIMARY KEY (id_product)
+);
+
+CREATE TABLE Company(
+    id_company BIGINT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100),
+    street VARCHAR(100),
+    nr VARCHAR(100),
+    zip VARCHAR(7),
+    PRIMARY KEY (id_company)
+);
+
+CREATE TABLE Department(
+    code VARCHAR(10) NOT NULL,
+    number BIGINT NOT NULL,
+    name VARCHAR(100),
+    PRIMARY KEY (code, number)
+);

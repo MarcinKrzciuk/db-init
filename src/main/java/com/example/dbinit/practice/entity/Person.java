@@ -1,5 +1,6 @@
-package com.example.dbinit.entity;
+package com.example.dbinit.practice.entity;
 
+import com.example.dbinit.practice.enums.Gender;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

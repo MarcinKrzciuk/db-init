@@ -1,6 +1,6 @@
-package com.example.dbinit.company;
+package com.example.dbinit.composedprimary.pk.company;
 
-import com.example.dbinit.company.embedabbles.Address;
+import com.example.dbinit.composedprimary.pk.company.embedabbles.Address;
 import lombok.Getter;
 import lombok.Setter;
 

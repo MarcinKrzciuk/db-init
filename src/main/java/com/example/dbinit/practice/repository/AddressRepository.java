@@ -1,6 +1,6 @@
-package com.example.dbinit.repository;
+package com.example.dbinit.practice.repository;
 
-import com.example.dbinit.entity.Address;
+import com.example.dbinit.practice.entity.Address;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

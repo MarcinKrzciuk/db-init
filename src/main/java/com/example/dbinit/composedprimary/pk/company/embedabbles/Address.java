@@ -1,4 +1,4 @@
-package com.example.dbinit.company.embedabbles;
+package com.example.dbinit.composedprimary.pk.company.embedabbles;
 
 import lombok.Getter;
 import lombok.Setter;

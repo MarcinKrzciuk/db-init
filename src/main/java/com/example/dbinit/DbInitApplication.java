@@ -1,9 +1,6 @@
 package com.example.dbinit;
 
-import com.example.dbinit.entity.Address;
-import com.example.dbinit.entity.Person;
-import com.example.dbinit.repository.AddressRepository;
-import com.example.dbinit.repository.PersonRepository;
+import com.example.dbinit.composedprimary.pk.company.Department;
 import lombok.var;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -30,17 +27,25 @@ public class DbInitApplication {
 		var entityManagerFactory = Persistence.createEntityManagerFactory("test");
 		var entityManager = entityManagerFactory.createEntityManager();
 
-		Person person1 = new Person("Marcin", "Krzciuk", 45, 1L);
+//		entityManager.getTransaction().begin();
+//		entityManager.persist(person1);
+//		entityManager.getTransaction().commit();
+//
+//		Address address1 = new Address("Wodna", 13, 9999);
+//		entityManager.getTransaction().begin();
+//		entityManager.persist(address1);
+//		entityManager.getTransaction().commit();
+//		entityManager.close();
+
+
 
 		entityManager.getTransaction().begin();
-		entityManager.persist(person1);
+		Department department = new Department();
+		department.setName("IT");
+		department.setCode("ABC");
+		department.setNumber(123L);
+		entityManager.persist(department);
 		entityManager.getTransaction().commit();
-
-		Address address1 = new Address("Wodna", 13, 9999);
-		entityManager.getTransaction().begin();
-		entityManager.persist(address1);
-		entityManager.getTransaction().commit();
-		entityManager.close();
 
 	}
 }

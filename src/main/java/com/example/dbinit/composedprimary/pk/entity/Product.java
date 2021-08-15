@@ -1,4 +1,4 @@
-package com.example.dbinit.entity;
+package com.example.dbinit.composedprimary.pk.entity;
 
 import lombok.Getter;
 import lombok.Setter;

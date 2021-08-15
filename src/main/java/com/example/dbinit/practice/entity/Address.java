@@ -1,4 +1,4 @@
-package com.example.dbinit.entity;
+package com.example.dbinit.practice.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
